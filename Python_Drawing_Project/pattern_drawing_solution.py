@@ -22,37 +22,40 @@ elif choice in [2, 5, 8]:  # Patterns that need size
 # Step 4: Generate the selected pattern
 if choice == 1:  # Right-angled Triangle
     # TODO: Loop through rows and print increasing stars
-    pass
+    for i in range(rows):
+        for j in range(i + 1):
+            print("*", end="")
+        print()  # За нов ред
 
 elif choice == 2:  # Square with Hollow Center
     # TODO: Create a square with a hollow center
-    pass
+    print("⚠️ This pattern is not implemented yet. Please choose another.")
 
 elif choice == 3:  # Diamond
     # TODO: Create a diamond shape using loops
-    pass
+    print("⚠️ This pattern is not implemented yet. Please choose another.")
 
 elif choice == 4:  # Left-angled Triangle
     # TODO: Print decreasing stars for each row
-    pass
+    print("⚠️ This pattern is not implemented yet. Please choose another.")
 
 elif choice == 5:  # Hollow Square
     # TODO: Similar to choice 2 but ensure perfect square logic
-    pass
+    print("⚠️ This pattern is not implemented yet. Please choose another.")
 
 elif choice == 6:  # Pyramid
     # TODO: Center-align stars to form a pyramid
-    pass
+    print("⚠️ This pattern is not implemented yet. Please choose another.")
 
 elif choice == 7:  # Reverse Pyramid
     # TODO: Create an upside-down pyramid
-    pass
+    print("⚠️ This pattern is not implemented yet. Please choose another.")
 
 elif choice == 8:  # Rectangle with Hollow Center
     # TODO: Handle separate width and height inputs for rectangle
     width = int(input("Enter the width of the rectangle: "))
     height = int(input("Enter the height of the rectangle: "))
-    pass
+    print("⚠️ This pattern is not implemented yet. Please choose another.")
 
 else:
     print("❌ Invalid choice! Please restart the program.")
