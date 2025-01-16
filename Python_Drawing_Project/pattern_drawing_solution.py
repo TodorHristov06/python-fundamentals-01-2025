@@ -67,11 +67,16 @@ elif choice == 7:  # Reverse Pyramid
         print(" " * spaces + "*" * stars)
 
 elif choice == 8:  # Rectangle with Hollow Center
-    # TODO: Handle separate width and height inputs for rectangle
     width = int(input("Enter the width of the rectangle: "))
     height = int(input("Enter the height of the rectangle: "))
-    print("⚠️ This pattern is not implemented yet. Please choose another.")
-
+    
+    for row in range(height):
+        for col in range(width):
+            if row == 0 or row == height - 1 or col == 0 or col == width - 1:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
 else:
     print("❌ Invalid choice! Please restart the program.")
 
