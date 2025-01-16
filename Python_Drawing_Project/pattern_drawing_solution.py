@@ -35,8 +35,11 @@ elif choice == 2:  # Square with Hollow Center
         print() 
 
 elif choice == 3:  # Diamond
-    # TODO: Create a diamond shape using loops
-    print("⚠️ This pattern is not implemented yet. Please choose another.")
+    for i in range(rows):  
+        print(" " * (rows - i - 1) + "*" * (2 * i + 1))
+
+    for i in range(rows - 2, -1, -1):  
+        print(" " * (rows - i - 1) + "*" * (2 * i + 1))
 
 elif choice == 4:  # Left-angled Triangle
     # TODO: Print decreasing stars for each row
