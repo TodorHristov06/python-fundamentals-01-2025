@@ -42,12 +42,15 @@ elif choice == 3:  # Diamond
         print(" " * (rows - i - 1) + "*" * (2 * i + 1))
 
 elif choice == 4:  # Left-angled Triangle
-    # TODO: Print decreasing stars for each row
-    print("⚠️ This pattern is not implemented yet. Please choose another.")
+    for i in range(rows, 0, -1):  
+        print("*" * i)
 
 elif choice == 5:  # Hollow Square
-    # TODO: Similar to choice 2 but ensure perfect square logic
-    print("⚠️ This pattern is not implemented yet. Please choose another.")
+    for i in range(size):
+        if i == 0 or i == size - 1:  
+            print("*" * size)
+        else: 
+            print("*" + " " * (size - 2) + "*")
 
 elif choice == 6:  # Pyramid
     # TODO: Center-align stars to form a pyramid
