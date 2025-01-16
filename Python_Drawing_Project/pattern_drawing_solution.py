@@ -53,8 +53,11 @@ elif choice == 5:  # Hollow Square
             print("*" + " " * (size - 2) + "*")
 
 elif choice == 6:  # Pyramid
-    # TODO: Center-align stars to form a pyramid
-    print("⚠️ This pattern is not implemented yet. Please choose another.")
+    for row in range(1, rows + 1):
+        spaces = rows - row
+        stars = 2 * row - 1
+        
+        print(" " * spaces + "*" * stars)
 
 elif choice == 7:  # Reverse Pyramid
     # TODO: Create an upside-down pyramid
