@@ -60,8 +60,11 @@ elif choice == 6:  # Pyramid
         print(" " * spaces + "*" * stars)
 
 elif choice == 7:  # Reverse Pyramid
-    # TODO: Create an upside-down pyramid
-    print("⚠️ This pattern is not implemented yet. Please choose another.")
+   for row in range(rows, 0, -1):
+        spaces = rows - row
+        stars = 2 * row - 1
+        
+        print(" " * spaces + "*" * stars)
 
 elif choice == 8:  # Rectangle with Hollow Center
     # TODO: Handle separate width and height inputs for rectangle
