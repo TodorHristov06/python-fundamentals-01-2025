@@ -30,7 +30,7 @@ def create_account(account_holders, balances, loans):
     account_holders.append(new_holder)  # Add the account holder name
     balances.append(0)                  # Initialize balance to 0
     loans.append(0)                     # Initialize loan amount to 0
-    print(f"Account created successfully for {new_holder}!")
+    print(f"✅ Account created successfully for {new_holder}!")
     print("Account Balance: $0.00 | Loan Amount: $0.00")
 
 def deposit():
@@ -73,9 +73,16 @@ def withdraw(account_holders, balances, transaction_histories):
     else:
         print("❌ Account not found. Please check the account name.")
 
-def check_balance():
+def check_balance(account_holders, balances):
     """Check balance of an account."""
-    pass  # TODO: Add logic
+    name = input("Enter your account name: ")
+
+     # Check if the account exists
+    if name in account_holders:
+        index = account_holders.index(name)
+        print(f"✅ Your balance is: ${balances[index]:.2f}")
+    else:
+        print("❌ Account not found. Please check the account name.")
 
 def list_accounts():
     """List all account holders and details."""
