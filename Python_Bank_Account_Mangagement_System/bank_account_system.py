@@ -33,7 +33,7 @@ def create_account(account_holders, balances, loans):
     print(f"✅ Account created successfully for {new_holder}!")
     print("Account Balance: $0.00 | Loan Amount: $0.00")
 
-def deposit():
+def deposit(account_holders, balances, transaction_histories):
     """Deposit money into an account."""
     name = input("Enter your account name: ")
 
@@ -115,13 +115,13 @@ def main():
         choice = int(input("Enter your choice: "))
         # Map choices to functions
         if choice == 1:
-            create_account()
+            create_account(account_holders, balances, loans)
         elif choice == 2:
-            deposit()
+            deposit(account_holders, balances, transaction_histories)
         elif choice == 3:
-            withdraw()
+            withdraw(account_holders, balances, transaction_histories)
         elif choice == 4:
-            check_balance()
+            check_balance(account_holders, balances)
         elif choice == 5:
             list_accounts()
         elif choice == 6:
