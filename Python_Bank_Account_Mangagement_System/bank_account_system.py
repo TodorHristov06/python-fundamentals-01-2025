@@ -35,10 +35,27 @@ def create_account(account_holders, balances, loans):
 
 def deposit():
     """Deposit money into an account."""
-    pass  # TODO: Add logic
+    name = input("Enter your account name: ")
+
+    # Check if the account exists
+    if name in account_holders:
+        index = account_holders.index(name)  # Find the index of the account
+        amount = float(input("Enter deposit amount: $"))
+
+        if amount > 0:
+            balances[index] += amount  # Update balance
+            transaction_histories.append(f"{name} deposited ${amount:.2f}")  # Log transaction
+            print(f"✅ Deposit successful! New balance: ${balances[index]:.2f}")
+        else:
+            print("❌ Invalid amount. Deposit must be greater than zero.")
+    else:
+        print("❌ Account not found. Please check the account name.")
+
 
 def withdraw():
     """Withdraw money from an account."""
+
+    
     pass  # TODO: Add logic
 
 def check_balance():
