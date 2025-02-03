@@ -52,11 +52,26 @@ def deposit():
         print("❌ Account not found. Please check the account name.")
 
 
-def withdraw():
+def withdraw(account_holders, balances, transaction_histories):
     """Withdraw money from an account."""
+    name = input("Enter your account name: ")
 
-    
-    pass  # TODO: Add logic
+    # Check if the account exists
+    if name in account_holders:
+        index = account_holders.index(name)  # Find the index of the account
+        amount = float(input("Enter withdrawal amount: $"))
+
+        if amount > 0:
+            if amount <= balances[index]:
+                balances[index] -= amount  # Update balance
+                transaction_histories.append(f"{name} withdrew ${amount:.2f}")  # Log transaction
+                print(f"✅ Withdrawal successful! New balance: ${balances[index]:.2f}")
+            else:
+                print("❌ Insufficient funds. You cannot withdraw more than your balance.")
+        else:
+            print("❌ Invalid amount. Withdrawal must be greater than zero.")
+    else:
+        print("❌ Account not found. Please check the account name.")
 
 def check_balance():
     """Check balance of an account."""
